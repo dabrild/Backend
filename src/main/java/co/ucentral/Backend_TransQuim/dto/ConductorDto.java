@@ -1,4 +1,6 @@
 package co.ucentral.Backend_TransQuim.dto;
 
-public record ConductorDto() {
+import java.time.LocalDateTime;
+
+public record ConductorDto(Long cedula, String nombre,String apellido, String correo,String clave, LocalDateTime fechaRegistro){
 }
