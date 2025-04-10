@@ -1,6 +1,7 @@
 package co.ucentral.Backend_TransQuim.persistencia.entidades;
 
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -21,7 +22,10 @@ public class Conductor {
     private Long cedula;
     private String nombre;
     private String apellido;
+
+    @Column(unique = true)
     private String correo;
+    private String clave;
     private LocalDateTime fechaRegistro;
 
 }
