@@ -4,8 +4,6 @@ import co.ucentral.Backend_TransQuim.dto.ConductorDto;
 import co.ucentral.Backend_TransQuim.persistencia.entidades.Conductor;
 import co.ucentral.Backend_TransQuim.persistencia.repositorios.ConductorRepositorio;
 import lombok.AllArgsConstructor;
-
-
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +16,7 @@ import java.util.Optional;
 @Service
 @AllArgsConstructor
 @Slf4j
+
 public class ConductorServicio {
 
 
