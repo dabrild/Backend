@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/vehiculos")
 @CrossOrigin(origins = "*")
+
 public class VehiculoControlador {
     VehiculoServicio vehiculoServicio;
 
