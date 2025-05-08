@@ -9,3 +9,4 @@ public interface ConductorRepositorio extends JpaRepository<Conductor, Long> {
     Optional<Conductor> findByCorreo(String correo);
 
 }
+
