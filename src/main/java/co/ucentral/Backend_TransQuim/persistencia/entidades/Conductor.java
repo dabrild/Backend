@@ -1,10 +1,7 @@
 package co.ucentral.Backend_TransQuim.persistencia.entidades;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -27,5 +24,8 @@ public class Conductor {
     private String correo;
     private String clave;
     private LocalDateTime fechaRegistro;
+
+    @OneToOne(mappedBy = "conductor")
+    private Vehiculo vehiculo;
 
 }
