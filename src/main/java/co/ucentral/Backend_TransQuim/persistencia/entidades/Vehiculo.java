@@ -1,5 +1,6 @@
 package co.ucentral.Backend_TransQuim.persistencia.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,7 +24,7 @@ public class Vehiculo {
 
     @OneToOne
     @JoinColumn(name = "cedula_conductor", unique = true) // Unique para evitar duplicados
+    @JsonIgnore
     private Conductor conductor;
 
 }
-

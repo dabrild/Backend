@@ -20,7 +20,7 @@ public class VehiculoControlador {
     VehiculoServicio vehiculoServicio;
 
 
-    @GetMapping("/")
+    @GetMapping("/listar")
     public List<Vehiculo> obtenerTodos() {
         return vehiculoServicio.obtenerVehiculo();
     }
@@ -40,6 +40,6 @@ public class VehiculoControlador {
             return ResponseEntity.badRequest().body(null);
         }
     }
+
+
 }
-
-
