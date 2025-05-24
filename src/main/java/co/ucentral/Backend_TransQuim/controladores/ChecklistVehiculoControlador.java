@@ -1,6 +1,5 @@
 package co.ucentral.Backend_TransQuim.controladores;
 
-
 import co.ucentral.Backend_TransQuim.dto.ChecklistVehiculoDto;
 import co.ucentral.Backend_TransQuim.persistencia.entidades.ChecklistVehiculo;
 import co.ucentral.Backend_TransQuim.servicios.ChecklistVehiculoServico;
@@ -11,21 +10,22 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/Checklist")
+@RequestMapping("/checklist")
 @CrossOrigin(origins = "*")
-
-
 public class ChecklistVehiculoControlador {
-    ChecklistVehiculoServico checklistVehiculoServico;
 
+    private final ChecklistVehiculoServico checklistVehiculoServico;
 
-    @GetMapping("/")
+    // Obtener todos los checklist
+    @GetMapping("/listar")
     public List<ChecklistVehiculo> obtenerTodos() {
         return checklistVehiculoServico.obtenerChecklistVehiculos();
     }
 
-    @PostMapping("/")
-    public ChecklistVehiculoDto crear (@RequestBody ChecklistVehiculoDto checklistVehiculo){
-        return checklistVehiculoServico.crear(checklistVehiculo);
+    // Crear un nuevo checklist
+    @PostMapping("/crear")
+    public ChecklistVehiculoDto crear(@RequestBody ChecklistVehiculoDto checklistVehiculoDto) {
+        return checklistVehiculoServico.crear(checklistVehiculoDto);
     }
 }
+

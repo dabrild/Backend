@@ -1,5 +1,18 @@
 package co.ucentral.Backend_TransQuim.dto;
 
-import java.time.LocalDateTime;
-
-public record ChecklistVehiculoDto (long licencia, String manualFugasDerrames, String botiquinPrimerosAuxilios, String elementosProteccionPersonal, String documentacionVigenteMercanciasPeligrosas, String certificacionManejoIncendios, String tipoQuimico, long cantidadQuimico, String manifiestosCarga, long soat, long tecnomecanica, long seguro, String tipoCarga, String tipoVehiculo){ }
+public record ChecklistVehiculoDto(
+        long licencia,
+        Boolean manualFugasDerrames,
+        Boolean botiquinPrimerosAuxilios,
+        Boolean elementosProteccionPersonal,
+        Boolean documentacionVigenteMercanciasPeligrosas,
+        Boolean certificacionManejoIncendios,
+        Boolean manifiestosCarga,
+        Boolean soat,
+        Boolean tecnomecanica,
+        Boolean seguro,
+        String tipoQuimico,
+        String cantidadQuimico,
+        String tipoCarga,
+        String tipoVehiculo
+) {}
