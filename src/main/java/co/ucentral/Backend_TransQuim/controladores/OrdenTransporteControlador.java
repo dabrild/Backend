@@ -17,12 +17,12 @@ import java.util.List;
 public class OrdenTransporteControlador {
     OrdenTransporteServicio ordenTransporteServicio;
 
-    @GetMapping("/")
+    @GetMapping("/obtener")
     public List<OrdenTransporte> obtenerTodos(){
         return  ordenTransporteServicio.obtenerOrdenTrasnporte();
     }
 
-    @PostMapping("/")
+    @PostMapping("/crear")
     public OrdenTransporteDto crear(@RequestBody OrdenTransporteDto ordenTransporte){ return  ordenTransporteServicio.crear(ordenTransporte);}
 
 
